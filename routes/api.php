@@ -22,6 +22,9 @@ Route::post('register', [AuthController::class, 'register']);
 
 
 Route::middleware(['auth:api'])->group(function () {
+    Route::post('store', [ProductController::class, 'store']);
     Route::get('index', [ProductController::class, 'index']);
+    Route::get('show', [ProductController::class, 'show']);
+
     Route::post('logout', [AuthController::class, 'logout']);
 });
