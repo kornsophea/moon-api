@@ -83,7 +83,7 @@ class AuthController extends Controller
         if (Auth::check()) {
             $user = Auth::user();
             $user->tokens()->where('revoked', false)->delete();
-            return $this->sendResponse(null,'Logout Success');
+            return $this->sendResponse(null, 'Logout Success');
         } else {
             return $this->sendError('Unauthenticated.');
         }
