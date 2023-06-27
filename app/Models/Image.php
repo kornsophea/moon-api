@@ -14,6 +14,6 @@ class Image extends Model
     protected $appends = ['image_path'];
 
     public function getImagePathAttribute() {
-        return env('APP_URL').'images/'.$this->image;
+        return env('DO_URL').$this->image;
     }
 }
