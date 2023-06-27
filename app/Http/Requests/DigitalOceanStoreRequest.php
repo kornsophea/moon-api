@@ -22,7 +22,7 @@ class DigitalOceanStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'doctorProfileImageFile' => 'required|image|max:2048',
+            'doctorProfileImageFile' => 'required|image',
         ];
     }
 }
